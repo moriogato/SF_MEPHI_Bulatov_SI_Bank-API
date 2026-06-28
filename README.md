@@ -434,7 +434,7 @@ $body = @{amount = 1000} | ConvertTo-Json
 Invoke-RestMethod -Uri "http://localhost:8080/accounts/1/deposit" -Method Post -Body $body -ContentType "application/json" -Headers $headers
 ```
 Перевод:  
-````powershell
+```powershell
 $body = @{from_account_id=1; to_account_id=2; amount=100.00; description="Test transfer"} | ConvertTo-Json  
 Invoke-RestMethod -Uri "http://localhost:8080/transfer" -Method Post -Body $body -ContentType "application/json" -Headers $headers
 ```
